@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>07 CSS3花式转换（纸牌）</title>
+</head>
+<body>
+	<style>
+	body{
+		text-align:center;
+		}	
+	img{
+		width: 300px;
+		height: 460px;
+	}
+	.items{
+		position: absolute;
+		left: 75%;
+		top: 5%;
+	}
+	.items .item:nth-child(1){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index: -1;
+	}
+	.items .item:nth-child(2){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:1;	
+	}
+	.items .item:nth-child(3){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:3;	
+	}
+	.items .item:nth-child(4){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:5;
+	}
+	.items .item:nth-child(5){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:7;
+	}
+	.items .item:nth-child(6){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:9;
+	}
+	.items .item:nth-child(7){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:11;
+	}
+	.items .item:nth-child(8){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:13;
+	}
+	.items .item:nth-child(9){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:15;
+	}
+	.items .item:nth-child(10){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:17;
+	}
+	.items .item:nth-child(11){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:19;
+	}
+	.items .item:nth-child(12){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:21;
+	}
+	.items .item:nth-child(13){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:23;
+	}
+	.items .item:nth-child(14){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:25;
+	}
+	.items .item:nth-child(15){
+		position:absolute;
+		left:50%;
+		margin: 0px auto 0px -512px;
+		z-index:27;
+	}
+	.items:hover .pic1{
+		transform: rotate(-84deg);
+	}
+	.items:hover .pic2{
+		transform: rotate(-72deg);
+	}
+	.items:hover .pic3{
+		transform: rotate(-60deg);
+	}
+	.items:hover .pic4{
+		transform: rotate(-48deg);
+	}
+	.items:hover .pic5{
+		transform: rotate(-36deg);	
+	}
+	.items:hover .pic6{
+		transform: rotate(-24deg);	
+	}
+	.items:hover .pic7{
+		transform: rotate(-12deg);
+	}
+	.items:hover .pic8{
+		transform: rotate(0deg);
+	}
+	.items:hover .pic9{
+		transform: rotate(12deg);
+	}
+	.items:hover .pic10{
+		transform: rotate(24deg);
+	}
+	.items:hover .pic11{
+		transform: rotate(36deg);
+	}
+	.items:hover .pic12{
+		transform: rotate(48deg);
+	}
+	.items:hover .pic13{
+		transform: rotate(60deg);
+	}
+	.items:hover .pic14{
+		transform: rotate(72deg);
+	}
+	.items:hover .pic15{
+		transform: rotate(84deg);
+	}
+	.items .item>[class^='pic']{
+		transform-origin:  bottom center;
+		transition: transform 0.5s linear;
+	}
+	.items:hover .item{
+		transform-origin: center;
+		animation: movies 1s 1;
+	}
+	@keyframes movies{
+		
+		0%{transform: rotate(0deg) translateX(0px);
+		}
+		100%{transform: rotate(360deg) translateX(0px);
+		}
+	}
+	</style>
+</body>
+	<div class="items">
+	        <div class="item">
+	        	<div class="pic1">
+	            	<img src="images/1.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="pic2">
+	                <img src="images/2.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="pic3">
+	                <img src="images/3.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="pic4">
+	                <img src="images/4.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="pic5">
+	                <img src="images/5.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	        	<div class="pic6">
+	            	<img src="images/6.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="pic7">
+	                <img src="images/7.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="pic8">
+	                <img src="images/8.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="pic9">
+	                <img src="images/9.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="pic10">
+	                <img src="images/10.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	        	<div class="pic11">
+	            <img src="images/11.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="pic12">
+	                <img src="images/12.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="pic13">
+	                <img src="images/13.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="pic14">
+	                <img src="images/j.jpg" alt="">
+	            </div>
+	        </div>
+	        <div class="item">
+	            <div class="pic15">
+	                <img src="images/j2.jpg" alt="">
+	            </div>
+	        </div>
+	</div>
+</html>
