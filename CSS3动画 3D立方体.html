@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSS3动画 3D立方体</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            width:300px;
+            height:300px;
+            position:fixed;
+            left:0;right:0;
+            top:0;bottom:0;
+            margin:auto;
+            background-size: 100% 100%;
+            transform-style: preserve-3d;
+            transform: rotateY(30deg) rotateX(-60deg);
+            animation: divmove 10s linear infinite;
+
+        }
+        @keyframes divmove{
+        	25%{
+        		transform: scale(1);
+        	}
+        	50%{
+        		transform: rotateY(180deg) rotateX(540deg);
+        	}
+        	75%{
+        		left: 50px;
+        		top: 100px;
+        	}
+        	100%{
+        		left: 0;
+        		top: 0;
+        		transform: rotateY(-180deg) rotateX(-540deg) scale(2s);
+        	}
+        }
+        .box div{
+            width:300px;
+            height:300px;
+            text-align: center;
+            line-height:300px;
+            font-size: 50px;
+            font-weight:bolder;
+            color:#fff;
+            position:absolute;    //让6个面全部定位在父元素里面 
+            left:0;top:0;
+            opacity:0.5;   //透明属性
+            backface-visibility:hidden;
+        }
+ 
+        .up{
+            /* 第一个面往前走 */
+            background:lightgreen;
+            transform:translateZ(150px);
+        }
+        .down{
+            /* 第二个面往后走 */
+            background:lightblue;
+            transform:translateZ(-150px) rotateY(180deg); /*rotateY(180deg)  让正面朝外*/
+        }
+        .forward{
+            /* 先往上位移150px  再绕着X轴转动90deg */
+            background:orange;
+            transform:translateY(150px) rotateX(-90deg);
+        }
+        .backward{
+            /* 先往下位移150px,再绕着X轴转动90deg */
+            background:orchid;
+            transform:translateY(-150px) rotateX(90deg);
+        }
+
+        .left{
+            /* 先往左位移150px , 再绕着Y轴转动90deg */
+            background:lightgray;
+            transform:translateX(150px) rotateY(90deg);
+        }
+        .right{
+            /* 先往右侧位移150px,再绕着Y轴转动90deg */
+            background:lightyellow;
+            transform:translateX(-150px) rotateY(-90deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="up">上</div>
+        <div class="down">下</div>
+        <div class="forward">前</div>
+        <div class="backward">后</div>
+        <div class="left">左</div>
+        <div class="right">右</div>
+    </div>
+</body>
+</html>
