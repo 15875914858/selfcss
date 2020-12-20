@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 大鲨鱼</title>
+	<style>
+	body {
+		background-color: lightblue;
+    	overflow: hidden;
+	}
+
+	.fish8 {
+		width: 200px;
+		height: 200px;
+		background-color: rgba(0,0,0,0);
+		position: absolute;
+		left: 0;
+		top: 0;
+		animation: run 20s linear infinite;
+		animation-direction: normal;
+	}
+
+		@keyframes run{
+		0% {
+	}
+		15% {
+		    transform: translate(600px,0px) rotate(45deg);
+	}
+		50% {
+		    transform: translate(600px,350px) rotate(135deg);
+	}
+		75% {
+		    transform: translate(50px,300px) rotate(235deg);
+	}
+		100% {
+		    transform: translate(0px,0px) rotate(360deg);
+	}
+}
+		.redfish8 {
+    		width: 174px;
+    		height: 126px;
+    		position: absolute;
+    		left: 35%;
+    		top: 0;
+    		background: url(images/fish8.png) no-repeat left top;
+    		transition: all 0.8s steps(8);
+    		animation: active1 0.8s steps(8) infinite;
+	}
+	@keyframes active1{
+		0% {
+	}
+		100% {
+    		background-position: left -1008px;
+	}
+}
+		.shark1 {
+    		width: 509px;
+    		height: 270px;
+    		animation: run2 20s linear infinite;
+}
+	@keyframes run2{
+		0% {
+    		transform: translateX(-600px);
+	}
+		100% {
+    		transform: translateX(2000px);
+	}
+}
+		.blueshark {
+    		width: 509px;
+    		height: 270px;
+    		background: url(images/shark1.png) no-repeat;
+    		animation: active2 1s steps(8) infinite;
+}
+	@keyframes active2{
+		0% {
+		}
+		100% {
+		    background-position: left -2160px;
+		}
+}
+		.shark2{
+			width: 509px;
+    		height: 270px;
+    		animation: run3 20s linear infinite;
+}
+	@keyframes run3{
+		0% {
+    		transform: translateX(-600px);
+	}
+		100% {
+    		transform: translateX(2000px);
+	}
+}
+		.yellowshark {
+    		width: 509px;
+    		height: 270px;
+    		background: url(images/shark2.png) no-repeat;
+    		animation: active3 1s steps(12) infinite;
+}
+	@keyframes active3{
+		0% {
+		}
+		100% {
+		    background-position: right -3273px;
+		}
+}
+.fish1 {
+		width: 200px;
+		height: 200px;
+		background-color: rgba(0,0,0,0);
+		position: absolute;
+		left: 0%;
+		top: 40%;
+		animation: run4 40s linear infinite;
+		animation-direction: normal;
+	}
+
+		@keyframes run4{
+		30% {
+            transform: translate(1400px,250px) rotate(0deg);
+        }
+        50% {
+            transform: translate(1400px,-700px) rotate(180deg);
+        }
+        80% {
+            transform: translate(-200px,0) rotate(180deg);
+        }
+}
+		.redfish1 {
+    		width: 178px;
+    		height: 187px;
+    		position: absolute;
+    		left: 35%;
+    		top: 0;
+    		background: url(images/fish10.png) no-repeat left top;
+    		transition: all 0.8s steps(6);
+    		animation: active4 0.8s steps(6) infinite;
+	}
+	@keyframes active4{
+		0% {
+	}
+		100% {
+    		background-position: left -1115px;
+	}
+}
+	</style>
+</head>
+<body>
+
+    <div class="fish8">
+        <div class="redfish8"></div>
+    </div>
+    <div class="fish1">
+        <div class="redfish1"></div>
+    </div>
+	<div class="shark1">
+		 <div class="blueshark"></div>
+	</div>
+	<div class="shark2">
+		<div class="yellowshark"></div>
+	</div>   
+
+
+</body>
+</html>
